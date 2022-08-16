@@ -1,0 +1,15 @@
+#/bin/bash
+
+set -eu
+
+brew bundle --file=Brewfile --no-lock
+echo
+path="export PATH=${HOME}/.cargo/bin:${PATH}"
+eval "${path}"
+cargo build
+cargo install czkawka_gui czkawka_cli
+echo
+echo "${path}"
+
+#cargo run --release --bin czkawka_gui
+#cargo run --release --bin czkawka_cli
