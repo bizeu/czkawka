@@ -2,6 +2,7 @@
 
 set -eu
 
+git pull
 brew bundle --file=Brewfile --no-lock
 echo
 path="export PATH=${HOME}/.cargo/bin:${PATH}"
